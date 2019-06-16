@@ -1,0 +1,60 @@
+﻿@model SzParag.Models.Product
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.StripCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StripCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Unit)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Unit.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Category1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Category1.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Category2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Category2.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Category3)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Category3.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Producer)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Producer.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

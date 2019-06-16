@@ -1,0 +1,64 @@
+﻿@model SzParag.Models.Product
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>Product</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="StripCode" class="control-label"></label>
+                <input asp-for="StripCode" class="form-control" />
+                <span asp-validation-for="StripCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UnitId" class="control-label"></label>
+                <select asp-for="UnitId" class="form-control" asp-items="ViewBag.UnitId"></select>
+                <span asp-validation-for="UnitId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Category1Id" class="control-label"></label>
+                <select asp-for="Category1Id" class="form-control" asp-items="ViewBag.Category1Id"></select>
+                <span asp-validation-for="Category1Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Category2Id" class="control-label"></label>
+                <select asp-for="Category2Id" class="form-control" asp-items="ViewBag.Category2Id"></select>
+                <span asp-validation-for="Category2Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Category3Id" class="control-label"></label>
+                <select asp-for="Category3Id" class="form-control" asp-items="ViewBag.Category3Id"></select>
+                <span asp-validation-for="Category3Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProducerId" class="control-label"></label>
+                <select asp-for="ProducerId" class="form-control" asp-items="ViewBag.ProducerId"></select>
+                <span asp-validation-for="ProducerId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
