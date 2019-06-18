@@ -19,5 +19,8 @@ namespace SzParag.Data
         public DbSet<SzParag.Models.Category2> Category2 { get; set; }
         public DbSet<SzParag.Models.Category3> Category3 { get; set; }
         public DbSet<SzParag.Models.Product> Product { get; set; }
+        public DbSet<SzParag.Models.Account> Account { get; set; }
+        public DbSet<SzParag.Models.Transaction> Transaction { get; set; }
+        public DbSet<SzParag.Models.Document> Document { get; set; }
     }
 }
